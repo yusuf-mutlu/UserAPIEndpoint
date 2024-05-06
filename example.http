@@ -1,0 +1,33 @@
+curl -X POST "http://127.0.0.1:8000/api/users" \
+     -H "Content-Type: application/ld+json" \
+     -d '{
+           "firstName": "John",
+           "lastName": "Doe",
+           "dateOfBirth": "1990-01-01",
+           "email": "john.doe@example.com"
+         }'
+
+curl -X GET "http://127.0.0.1:8000/api/users"
+
+
+curl -X GET "http://127.0.0.1:8000/api/users/1"
+
+
+curl -X PUT "http://127.0.0.1:8000/api/users/1" \
+     -H "Content-Type: application/ld+json" \
+     -d '{
+            "firstName": "Joseph",
+            "lastName": "Smith",
+            "dateOfBirth": "1990-01-01",
+            "email": "joseph.smith@example.com"
+        }'
+
+ curl -X PATCH "http://127.0.0.1:8000/api/users/1" \
+      -H "Content-Type: application/merge-patch+json" \
+      -d '{
+            "email": "joseph.smith2@example.com"
+        }'
+
+
+curl -X DELETE "http://127.0.0.1:8000/api/users/1"
+
