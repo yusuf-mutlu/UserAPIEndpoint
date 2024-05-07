@@ -25,8 +25,4 @@ services:
 
     App\Service\Interface\EmailServiceInterface:
         class: App\Service\EmailService
-
-    App\EventListener\UserPostWriteListener:
-        tags:
-            - { name: kernel.event_subscriber }
     

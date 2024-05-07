@@ -7,6 +7,6 @@ class EmailService implements EmailServiceInterface
 {
     public function sendWelcomeEmail(string $email): void
     {
-        echo "Sending welcome email to $email\n";
+        //echo "Sending welcome email to $email";
     }
 }

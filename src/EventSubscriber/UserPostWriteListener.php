@@ -1,5 +1,5 @@
 <?php
-namespace App\EventListener;
+namespace App\EventSubscriber;
 
 use ApiPlatform\Symfony\EventListener\EventPriorities;
 use App\Entity\User;
@@ -35,7 +35,7 @@ class UserPostWriteListener implements EventSubscriberInterface
         }
 
         if ($user->getEmail()) {
-            //in an ideal world email sending must be added to the queue
+            //in production email sending should be added to the queue
             $this->emailService->sendWelcomeEmail($user->getEmail());
         }
     }
