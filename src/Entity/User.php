@@ -6,7 +6,7 @@ use ApiPlatform\Metadata\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-//In production, User class must have authentication and authorization and email field should not be nullable
+//In production, User class must have authentication and authorization, ideally email field should not be nullable
 #[ApiResource]
 #[ORM\Entity]
 class User
