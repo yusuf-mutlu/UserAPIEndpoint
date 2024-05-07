@@ -25,7 +25,9 @@
   ```
   php bin/console doctrine:schema:create --env=test
   ```
-
+6. **Start server**:
+    ```
+    symfony server:start
 ## Usage
 
 ### Creating a User
@@ -70,4 +72,11 @@ curl -X PATCH "http://127.0.0.1:8000/api/users/1" \
 ### Delete a User
 ```bash
 curl -X DELETE "http://127.0.0.1:8000/api/users/1"
+```
+
+## Testing
+
+### Run tests with:
+```bash
+./vendor/bin/phpunit
 ```
